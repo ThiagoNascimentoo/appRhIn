@@ -1,0 +1,258 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7934A598-75E0-43AD-BF15-93DEA612EFD4}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>appRhIn</RootNamespace>
+    <AssemblyName>appRhIn</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Classes\Conexao.cs" />
+    <Compile Include="Classes\Funcionario.cs" />
+    <Compile Include="Forms\Acessos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Acessos.Designer.cs">
+      <DependentUpon>Acessos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CadastarUnidades.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CadastarUnidades.Designer.cs">
+      <DependentUpon>CadastarUnidades.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CadastrarAcesso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CadastrarAcesso.Designer.cs">
+      <DependentUpon>CadastrarAcesso.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CadastrarCargo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CadastrarCargo.Designer.cs">
+      <DependentUpon>CadastrarCargo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CadastrarFuncionario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CadastrarFuncionario.Designer.cs">
+      <DependentUpon>CadastrarFuncionario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CadastrarSetor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CadastrarSetor.Designer.cs">
+      <DependentUpon>CadastrarSetor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Cargos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Cargos.Designer.cs">
+      <DependentUpon>Cargos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Ferias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Ferias.Designer.cs">
+      <DependentUpon>Ferias.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Financeiro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Financeiro.Designer.cs">
+      <DependentUpon>Financeiro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Funcionarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Funcionarios.Designer.cs">
+      <DependentUpon>Funcionarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Holerite.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Holerite.Designer.cs">
+      <DependentUpon>Holerite.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Setores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Setores.Designer.cs">
+      <DependentUpon>Setores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Unidades.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Unidades.Designer.cs">
+      <DependentUpon>Unidades.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\FuncionarioBd.cs" />
+    <Compile Include="Models\Usuario.cs" />
+    <Compile Include="Classes\UsuarioLogado.cs" />
+    <Compile Include="Forms\Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MasterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MasterForm.Designer.cs">
+      <DependentUpon>MasterForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MenuInicial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MenuInicial.Designer.cs">
+      <DependentUpon>MenuInicial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RHDataSet.cs">
+      <DependentUpon>RHDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="RHDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RHDataSet.xsd</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Forms\CadastarUnidades.resx">
+      <DependentUpon>CadastarUnidades.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CadastrarFuncionario.resx">
+      <DependentUpon>CadastrarFuncionario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Ferias.resx">
+      <DependentUpon>Ferias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Financeiro.resx">
+      <DependentUpon>Financeiro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Funcionarios.resx">
+      <DependentUpon>Funcionarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Holerite.resx">
+      <DependentUpon>Holerite.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MasterForm.resx">
+      <DependentUpon>MasterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MenuInicial.resx">
+      <DependentUpon>MenuInicial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Unidades.resx">
+      <DependentUpon>Unidades.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="RHDataSet.xsc">
+      <DependentUpon>RHDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="RHDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>RHDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="RHDataSet.xss">
+      <DependentUpon>RHDataSet.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\acessos.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\beneficios.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ferias.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\financeiro.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\folhaPonto.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\func.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hierarquias.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rhIn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\unidades.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sair.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
